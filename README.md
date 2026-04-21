@@ -75,12 +75,14 @@ Existe una **asimetría extrema**, lo cual puede indicar:
 
 ---
 
-# 🏗️ Parte 2: Diseño
+# Parte 2: Diseño
 
 <img width="1417" height="82" alt="image" src="https://github.com/user-attachments/assets/d8b5f19e-1562-4f00-9ce8-2bd73808eaee" />
 
 
 ## 🔹 Arquitectura propuesta
+
+
 
 
 ```
@@ -128,6 +130,10 @@ sudo iptables -A FORWARD -s 172.17.0.0/16 -d 192.168.1.0/24 -j ACCEPT
 
 
 <img width="1405" height="144" alt="image" src="https://github.com/user-attachments/assets/55d5630d-8e02-416d-aa5b-2156b18727b0" />
+
+
+<img width="1439" height="325" alt="image" src="https://github.com/user-attachments/assets/18531a36-a18d-4598-a83e-baa79684cf40" />
+
 
 
 ```
