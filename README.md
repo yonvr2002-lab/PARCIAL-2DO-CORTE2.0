@@ -138,6 +138,11 @@ Cámara → YOLO → NetFlow Exportador → Colector → Dashboard
 
 # 🚉 Parte 2.b: Arquitectura avanzada
 
+
+<img width="1556" height="625" alt="image" src="https://github.com/user-attachments/assets/e051c2d4-0706-451c-bed7-975968aae646" />
+
+
+
 ## 🔹 Contenedores
 
 * C1: Lectura de placas (YOLO + OCR)
@@ -150,13 +155,22 @@ Cámara → YOLO → NetFlow Exportador → Colector → Dashboard
 
 ## 🔹 Infraestructura
 
+<img width="1317" height="76" alt="image" src="https://github.com/user-attachments/assets/7bb37172-7bd8-4fe6-a3d5-c59ea31ec4e4" />
+
+
 * VM1: Colector principal
 * VM2: Respaldo
 * Switch virtual: Open vSwitch
 
+<img width="1316" height="70" alt="image" src="https://github.com/user-attachments/assets/fe72c9d8-f7e7-40b0-a00c-ead0d1c38900" />
+
+
 ---
 
 ## 🔹 Direccionamiento IP
+
+<img width="1313" height="72" alt="image" src="https://github.com/user-attachments/assets/c2e0c9e8-ba10-4aa1-924e-bef5a2a6b2a0" />
+
 
 ```
 10.0.0.1 → VM1
