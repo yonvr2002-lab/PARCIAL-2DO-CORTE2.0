@@ -32,6 +32,9 @@ En un enlace de **100 Gbps**, es mejor usar **sFlow**, ya que permite detectar "
 
 ## 🔹 5-Tuple en NetFlow
 
+<img width="1446" height="124" alt="image" src="https://github.com/user-attachments/assets/bb709c1d-8591-49c1-9fc8-99d11e4d2814" />
+
+
 Los 5 campos son:
 
 * IP origen
@@ -50,6 +53,8 @@ Se analiza el **puerto destino**, por ejemplo:
 ---
 
 ## 🔹 Interpretación IP Accounting
+
+<img width="1447" height="339" alt="image" src="https://github.com/user-attachments/assets/3eb1b66e-e479-4537-8550-9bfef6b54e08" />
 
 Ejemplo:
 
