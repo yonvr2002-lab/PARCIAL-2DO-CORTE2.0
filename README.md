@@ -97,15 +97,26 @@ Existe una **asimetría extrema**, lo cual puede indicar:
 
 ---
 
+
 ## 🔹 Comunicación YOLO → VM
+
+<img width="1411" height="151" alt="image" src="https://github.com/user-attachments/assets/cef34ce8-3787-42dd-a36f-85d49a7f3c34" />
+
 
 * Uso de sockets (UDP/TCP)
 * Envío de datos en formato JSON
 * Red tipo bridge en Docker
 
+<img width="1409" height="483" alt="image" src="https://github.com/user-attachments/assets/2fb3052a-6dd3-4321-bdb9-cb8c19701055" />
+
 ---
 
 ## 🔹 Regla IP Accounting
+
+
+<img width="1431" height="298" alt="image" src="https://github.com/user-attachments/assets/dc2eee09-8689-4d5c-a6a2-9bb63ff22507" />
+
+
 
 ```bash
 sudo iptables -A FORWARD -s 172.17.0.0/16 -d 192.168.1.0/24 -j ACCEPT
@@ -114,6 +125,10 @@ sudo iptables -A FORWARD -s 172.17.0.0/16 -d 192.168.1.0/24 -j ACCEPT
 ---
 
 ## 🔹 Flujo de datos
+
+
+<img width="1405" height="144" alt="image" src="https://github.com/user-attachments/assets/55d5630d-8e02-416d-aa5b-2156b18727b0" />
+
 
 ```
 Cámara → YOLO → NetFlow Exportador → Colector → Dashboard
