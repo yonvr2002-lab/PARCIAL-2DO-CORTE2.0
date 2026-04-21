@@ -35,6 +35,7 @@ En un enlace de **100 Gbps**, es mejor usar **sFlow**, ya que permite detectar "
 <img width="1446" height="124" alt="image" src="https://github.com/user-attachments/assets/bb709c1d-8591-49c1-9fc8-99d11e4d2814" />
 
 
+
 Los 5 campos son:
 
 * IP origen
@@ -61,6 +62,10 @@ Ejemplo:
 * 192.168.1.10 → 10.0.0.5 → 1500 paquetes
 * 10.0.0.5 → 192.168.1.10 → 50 paquetes
 
+
+<img width="1444" height="79" alt="image" src="https://github.com/user-attachments/assets/81d2cf30-5410-49b1-ba59-1216a304b31e" />
+
+
 **Interpretación:**
 Existe una **asimetría extrema**, lo cual puede indicar:
 
@@ -72,7 +77,11 @@ Existe una **asimetría extrema**, lo cual puede indicar:
 
 # 🏗️ Parte 2: Diseño
 
+<img width="1417" height="82" alt="image" src="https://github.com/user-attachments/assets/d8b5f19e-1562-4f00-9ce8-2bd73808eaee" />
+
+
 ## 🔹 Arquitectura propuesta
+
 
 ```
 [ Cámara ]
