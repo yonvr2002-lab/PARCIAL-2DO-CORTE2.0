@@ -209,12 +209,27 @@ Cámara → YOLO → NetFlow Exportador → Colector → Dashboard
 
 # 📊 Cálculo de Throughput
 
+<img width="1565" height="238" alt="image" src="https://github.com/user-attachments/assets/46652221-e033-4749-bffc-ef0cc93d7dfc" />
+
+
+
 ## 🔹 Video
+
+
+<img width="1315" height="126" alt="image" src="https://github.com/user-attachments/assets/dc90e1dd-aea6-4e17-9ca9-a04665f67d8a" />
+
+
 
 * 50 KB/frame × 30 fps = 1500 KB/s
 * ≈ 1.5 MB/s ≈ **12 Mbps**
 
+
 ## 🔹 Metadata
+
+<img width="1316" height="129" alt="image" src="https://github.com/user-attachments/assets/66729bc0-087f-4f24-8dd2-c1b9e58baa1e" />
+<img width="1319" height="132" alt="image" src="https://github.com/user-attachments/assets/c098c28d-461e-4e07-a346-7819fd8b3c78" />
+
+
 
 * 200 bytes × 10 detecciones/s = 2000 bytes/s
 * ≈ **0.016 Mbps**
