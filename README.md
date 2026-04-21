@@ -1,17 +1,17 @@
-# 📡 Segundo Parcial – Conmutación y Teletráfico
+#  Segundo Parcial – Conmutación y Teletráfico
 
-## 📌 Descripción
+##  Descripción
 
 Este repositorio contiene el desarrollo completo del segundo parcial de Conmutación y Teletráfico, incluyendo parte conceptual, diseño de arquitectura y parte empírica basada en generación y análisis de tráfico de red con YOLO y NetFlow.
 
 ---
 
-# 🧠 Parte 1: Conceptual
+#  Parte 1: Conceptual
 
 <img width="1584" height="419" alt="image" src="https://github.com/user-attachments/assets/d9c6d946-e204-464c-b6d5-9ffa10ee45ea" />
 
 
-## 🔹 Diferencia entre NetFlow y sFlow
+##  Diferencia entre NetFlow y sFlow
 
 **NetFlow:**
 
@@ -30,7 +30,7 @@ En un enlace de **100 Gbps**, es mejor usar **sFlow**, ya que permite detectar "
 
 ---
 
-## 🔹 5-Tuple en NetFlow
+##  5-Tuple en NetFlow
 
 <img width="1446" height="124" alt="image" src="https://github.com/user-attachments/assets/bb709c1d-8591-49c1-9fc8-99d11e4d2814" />
 
@@ -53,7 +53,7 @@ Se analiza el **puerto destino**, por ejemplo:
 
 ---
 
-## 🔹 Interpretación IP Accounting
+##  Interpretación IP Accounting
 
 <img width="1447" height="339" alt="image" src="https://github.com/user-attachments/assets/3eb1b66e-e479-4537-8550-9bfef6b54e08" />
 
@@ -80,7 +80,7 @@ Existe una **asimetría extrema**, lo cual puede indicar:
 <img width="1417" height="82" alt="image" src="https://github.com/user-attachments/assets/d8b5f19e-1562-4f00-9ce8-2bd73808eaee" />
 
 
-## 🔹 Arquitectura propuesta
+##  Arquitectura propuesta
 
 
 
@@ -100,7 +100,7 @@ Existe una **asimetría extrema**, lo cual puede indicar:
 ---
 
 
-## 🔹 Comunicación YOLO → VM
+##  Comunicación YOLO → VM
 
 <img width="1411" height="151" alt="image" src="https://github.com/user-attachments/assets/cef34ce8-3787-42dd-a36f-85d49a7f3c34" />
 
@@ -113,7 +113,7 @@ Existe una **asimetría extrema**, lo cual puede indicar:
 
 ---
 
-## 🔹 Regla IP Accounting
+##  Regla IP Accounting
 
 
 <img width="1431" height="298" alt="image" src="https://github.com/user-attachments/assets/dc2eee09-8689-4d5c-a6a2-9bb63ff22507" />
@@ -126,7 +126,7 @@ sudo iptables -A FORWARD -s 172.17.0.0/16 -d 192.168.1.0/24 -j ACCEPT
 
 ---
 
-## 🔹 Flujo de datos
+##  Flujo de datos
 
 
 <img width="1405" height="144" alt="image" src="https://github.com/user-attachments/assets/55d5630d-8e02-416d-aa5b-2156b18727b0" />
@@ -142,14 +142,14 @@ Cámara → YOLO → NetFlow Exportador → Colector → Dashboard
 
 ---
 
-# 🚉 Parte 2.b: Arquitectura avanzada
+#  Parte 2.b: Arquitectura avanzada
 
 
 <img width="1556" height="625" alt="image" src="https://github.com/user-attachments/assets/e051c2d4-0706-451c-bed7-975968aae646" />
 
 
 
-## 🔹 Contenedores
+##  Contenedores
 
 * C1: Lectura de placas (YOLO + OCR)
 * C2: Conteo de parqueadero
@@ -159,7 +159,7 @@ Cámara → YOLO → NetFlow Exportador → Colector → Dashboard
 
 ---
 
-## 🔹 Infraestructura
+##  Infraestructura
 
 <img width="1317" height="76" alt="image" src="https://github.com/user-attachments/assets/7bb37172-7bd8-4fe6-a3d5-c59ea31ec4e4" />
 
@@ -183,7 +183,7 @@ Cámara → YOLO → NetFlow Exportador → Colector → Dashboard
 
 ---
 
-## 🔹 Direccionamiento IP
+##  Direccionamiento IP
 
 <img width="1313" height="72" alt="image" src="https://github.com/user-attachments/assets/c2e0c9e8-ba10-4aa1-924e-bef5a2a6b2a0" />
 
@@ -200,20 +200,20 @@ Cámara → YOLO → NetFlow Exportador → Colector → Dashboard
 
 ---
 
-## 🔹 Tipos de tráfico
+##  Tipos de tráfico
 
 * Video → UDP
 * Metadata → TCP
 
 ---
 
-# 📊 Cálculo de Throughput
+#  Cálculo de Throughput
 
 <img width="1565" height="238" alt="image" src="https://github.com/user-attachments/assets/46652221-e033-4749-bffc-ef0cc93d7dfc" />
 
 
 
-## 🔹 Video
+##  Video
 
 
 <img width="1315" height="126" alt="image" src="https://github.com/user-attachments/assets/dc90e1dd-aea6-4e17-9ca9-a04665f67d8a" />
@@ -224,7 +224,7 @@ Cámara → YOLO → NetFlow Exportador → Colector → Dashboard
 * ≈ 1.5 MB/s ≈ **12 Mbps**
 
 
-## 🔹 Metadata
+##  Metadata
 
 <img width="1316" height="129" alt="image" src="https://github.com/user-attachments/assets/66729bc0-087f-4f24-8dd2-c1b9e58baa1e" />
 <img width="1319" height="132" alt="image" src="https://github.com/user-attachments/assets/c098c28d-461e-4e07-a346-7819fd8b3c78" />
@@ -234,17 +234,17 @@ Cámara → YOLO → NetFlow Exportador → Colector → Dashboard
 * 200 bytes × 10 detecciones/s = 2000 bytes/s
 * ≈ **0.016 Mbps**
 
-## 🔹 Total por contenedor
+##  Total por contenedor
 
 ≈ **12 Mbps**
 
-## 🔹 Total sistema (5 contenedores)
+##  Total sistema (5 contenedores)
 
 ≈ **60 Mbps**
 
 ---
 
-## 🔹 Protocolo recomendado
+##  Protocolo recomendado
 
 **UDP para video**, porque:
 
@@ -259,7 +259,7 @@ Cámara → YOLO → NetFlow Exportador → Colector → Dashboard
 
 ---
 
-## 🔹 Regla NetFlow (5-tuple)
+##  Regla NetFlow (5-tuple)
 
 Ejemplo:
 
@@ -273,7 +273,7 @@ protocol=UDP
 
 ---
 
-## 🔹 Identificación de Top Talkers
+##  Identificación de Top Talkers
 
 ```bash
 sudo iptables -L -v -n
@@ -283,9 +283,9 @@ Se identifica la IP con mayor número de bytes transmitidos.
 
 ---
 
-# 🧪 Parte 3: Empírica
+#  Parte 3: Empírica
 
-## 🔹 Instalación
+##  Instalación
 
 ```bash
 pip install ultralytics matplotlib
@@ -294,7 +294,7 @@ apt-get install -y tcpdump nfdump iptables
 
 ---
 
-## 🔹 Script YOLO + envío UDP
+##  Script YOLO + envío UDP
 
 ```python
 import cv2
@@ -334,7 +334,7 @@ sock.close()
 
 ---
 
-## 🔹 Captura de tráfico
+##  Captura de tráfico
 
 ```bash
 sudo tcpdump -i lo -c 100 udp port 5555 -w /tmp/flujos.pcap
@@ -342,7 +342,7 @@ sudo tcpdump -i lo -c 100 udp port 5555 -w /tmp/flujos.pcap
 
 ---
 
-## 🔹 Convertir a NetFlow
+##  Convertir a NetFlow
 
 ```bash
 nflow-gen -r /tmp/flujos.pcap -o /tmp/flujos.nf
@@ -350,7 +350,7 @@ nflow-gen -r /tmp/flujos.pcap -o /tmp/flujos.nf
 
 ---
 
-## 🔹 Ver flujos (5-tuple)
+##  Ver flujos (5-tuple)
 
 ```bash
 nfdump -r /tmp/flujos.nf -q -o "fmt:%sa %da %sp %dp %pr %pkt %byt"
@@ -392,7 +392,7 @@ print(sorted(talkers.items(), key=lambda x: x[1], reverse=True))
 
 ---
 
-## 🔹 IP Accounting
+##  IP Accounting
 
 ```bash
 sudo iptables -A INPUT -p udp --dport 5555 -j ACCEPT
@@ -402,7 +402,7 @@ sudo iptables -L -v -n | grep "dpt:5555"
 
 ---
 
-## 🔹 Simulación de anomalía
+##  Simulación de anomalía
 
 ```bash
 sudo hping3 -S -p 5555 --flood 127.0.0.1
@@ -410,7 +410,7 @@ sudo hping3 -S -p 5555 --flood 127.0.0.1
 
 ---
 
-## 🔹 Respuestas finales
+##  Respuestas finales
 
 **5-Tuple:**
 
@@ -434,7 +434,7 @@ sudo iptables -L -v -n | grep "dpt:5555"
 
 ---
 
-## 🔹 Simulación sFlow
+##  Simulación sFlow
 
 ```python
 if frame_num % 10 == 0:
@@ -448,7 +448,7 @@ if frame_num % 10 == 0:
 
 ---
 
-# ✅ Conclusión
+#  Conclusión
 
 Este proyecto permite:
 
@@ -460,6 +460,6 @@ Este proyecto permite:
 
 ---
 
-# 👨‍💻 Autor
+#  Autor
 
 Yon Jaider Valdez Ruiz
