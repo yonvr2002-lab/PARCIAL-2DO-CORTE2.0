@@ -157,6 +157,12 @@ Cámara → YOLO → NetFlow Exportador → Colector → Dashboard
 
 <img width="1317" height="76" alt="image" src="https://github.com/user-attachments/assets/7bb37172-7bd8-4fe6-a3d5-c59ea31ec4e4" />
 
+#Infraestructura diseñada 
+
+
+<img width="736" height="465" alt="image" src="https://github.com/user-attachments/assets/dfd63fb4-2964-4ac1-ac9b-16c32b040ec6" />
+
+
 
 * VM1: Colector principal
 * VM2: Respaldo
