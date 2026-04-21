@@ -8,6 +8,9 @@ Este repositorio contiene el desarrollo completo del segundo parcial de Conmutac
 
 # 🧠 Parte 1: Conceptual
 
+<img width="1584" height="419" alt="image" src="https://github.com/user-attachments/assets/d9c6d946-e204-464c-b6d5-9ffa10ee45ea" />
+
+
 ## 🔹 Diferencia entre NetFlow y sFlow
 
 **NetFlow:**
