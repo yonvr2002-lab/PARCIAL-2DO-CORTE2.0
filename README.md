@@ -157,7 +157,10 @@ Cámara → YOLO → NetFlow Exportador → Colector → Dashboard
 
 <img width="1317" height="76" alt="image" src="https://github.com/user-attachments/assets/7bb37172-7bd8-4fe6-a3d5-c59ea31ec4e4" />
 
-#Infraestructura diseñada 
+
+
+##Infraestructura diseñada 
+
 
 
 <img width="1380" height="856" alt="image" src="https://github.com/user-attachments/assets/ef98b8a5-f69e-4f66-a350-1dc077b677bf" />
