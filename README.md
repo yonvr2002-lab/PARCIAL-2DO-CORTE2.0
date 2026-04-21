@@ -287,14 +287,26 @@ Se identifica la IP con mayor número de bytes transmitidos.
 
 ##  Instalación
 
+<img width="1547" height="271" alt="image" src="https://github.com/user-attachments/assets/7945e91c-1b78-4431-bf13-226cc1728eb0" />
+
+
 ```bash
 pip install ultralytics matplotlib
 apt-get install -y tcpdump nfdump iptables
 ```
+<img width="1181" height="768" alt="image" src="https://github.com/user-attachments/assets/3ea5a3d2-9bbe-44c8-80f1-957a657bf1a2" />
+
+
+<img width="762" height="879" alt="image" src="https://github.com/user-attachments/assets/34c978ce-cf47-4215-a572-f9d74faf7f3d" />
 
 ---
 
 ##  Script YOLO + envío UDP
+
+
+<img width="653" height="251" alt="image" src="https://github.com/user-attachments/assets/bc01dd27-15c3-4d4b-b2ef-2ff28f97fc8d" />
+
+
 
 ```python
 import cv2
