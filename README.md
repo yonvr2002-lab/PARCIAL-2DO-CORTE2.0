@@ -458,6 +458,80 @@ if frame_num % 10 == 0:
 * Reduce tráfico
 * Ideal para enlaces lentos
 
+
+print("""
+=======================================================================
+RESPUESTAS A LAS PREGUNTAS DE LA PARTE EMPIRICA
+=======================================================================
+
+PREGUNTA 1: 5-tuple completa de un flujo capturado con nfdump
+-----------------------------------------------------------------------
+  IP origen      : 127.0.0.1
+  IP destino     : 127.0.0.1
+  Puerto origen  : 54321  (efimero, asignado dinamicamente por el SO)
+  Puerto destino : 5555   (colector de alertas YOLO)
+  Protocolo      : 17     (UDP)
+
+  Representacion nfdump:
+  2026-04-26 10:00:00.123  0.333  127.0.0.1  127.0.0.1  54321  5555  17  30  2100
+
+
+PREGUNTA 2: Bytes contabilizados con iptables
+-----------------------------------------------------------------------
+  Comando para ver SOLO el trafico UDP al puerto 5555:
+  
+    sudo iptables -L -v -n | grep "dpt:5555"
+  
+  La columna 'bytes' muestra el total acumulado desde el ultimo -Z.
+  Cada mensaje YOLO tiene aprox. 40-60 bytes de payload.
+  30 frames x ~3 detecciones x 50 bytes = ~4500 bytes en trafico normal.
+
+
+PREGUNTA 3: Campo de la 5-tuple para medir consumo por aplicacion
+-----------------------------------------------------------------------
+  Se debe analizar el PUERTO DESTINO (%dp en nfdump).
+  
+  - Trafico HTTP  -> puerto destino 80
+  - Trafico HTTPS -> puerto destino 443
+  - Trafico YOLO  -> puerto destino 5555 (configurado en el script)
+  - Trafico SSH   -> puerto destino 22
+  
+  El colector NetFlow agrupa por %dp para diferenciar aplicaciones
+  y calcular el ancho de banda consumido por cada servicio.
+
+
+PREGUNTA 4: Modificar YOLO para simular muestreo sFlow (1 de cada 10)
+-----------------------------------------------------------------------
+  Modificacion del script original:
+
+    muestra_contador = 0
+    TASA_MUESTREO = 10  # enviar 1 de cada 10 detecciones
+
+    for box in results[0].boxes:
+        muestra_contador += 1
+        if muestra_contador % TASA_MUESTREO == 0:   # <-- filtro sFlow
+            cls = int(box.cls[0])
+            nombre_clase = model.names[cls]
+            confianza = float(box.conf[0])
+            mensaje = f"{time.time()},{frame_num},{nombre_clase},{confianza:.2f}".encode()
+            sock.sendto(mensaje, (colector_ip, colector_puerto))
+
+  Ventaja en enlace lento:
+  - Reduce el trafico de telemetria en un 90%.
+  - En un enlace de 1 Mbps saturado, enviar 1 de cada 10 paquetes
+    libera ancho de banda para el trafico de datos principal (video).
+  - El colector escala estadisticamente los conteos multiplicando
+    por la tasa de muestreo (x10) para estimar el trafico real.
+  - Es el mismo principio que usa sFlow en enlaces de 100 Gbps:
+    no es posible procesar cada paquete, pero el muestreo estadistico
+    es suficiente para identificar top talkers y anomalias.
+
+=======================================================================
+""")
+
+
+
+
 ---
 
 #  Conclusión
