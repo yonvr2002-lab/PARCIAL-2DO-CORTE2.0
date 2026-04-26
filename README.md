@@ -424,6 +424,13 @@ sudo hping3 -S -p 5555 --flood 127.0.0.1
 
 ##  Respuestas finales
 
+NETFLOW
+
+<img width="800" height="579" alt="imagen" src="https://github.com/user-attachments/assets/316e2be3-dad8-46f6-a029-0840b36343d6" />
+
+
+
+
 **5-Tuple:**
 
 * IP origen: 127.0.0.1
