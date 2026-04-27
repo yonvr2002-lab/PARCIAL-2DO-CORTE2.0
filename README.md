@@ -553,6 +553,6 @@ Este proyecto permite:
 
 ---
 
-#  Autor
+#  Autores
 
-Yon Jaider Valdez Ruiz
+Yon Valdez Ruiz, Daniel Guatibonza, Valentina Diaz y Oscar Rada
